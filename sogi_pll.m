@@ -11,7 +11,7 @@ Ts = 1/fs;  % Sampling period
 f_grid = 50.0;      % Hz grid freq
 wff = 2*pi*f_grid;
 
-t = [0:Ts:10];      % Simulation time
+t = 0:Ts:10;      % Simulation time
 vi = 310*sin(wff*t);% input voltage for PLL - it's simulating grid-voltage
 
 %% Debug outputs
@@ -52,7 +52,7 @@ theta_est = 0.0;
 theta_integ = 0.0;
 
 %% Algorithm RUN
-for i = 1:length(t);
+for i = 1:length(t)
     
    vin_norm = vi(i)/310;    % Normalized value, diveded by 310
    
